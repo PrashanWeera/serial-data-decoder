@@ -1,6 +1,7 @@
 # Serial Data Decoder
 
 This project decodes serial data received through the serial port. It accepts serial data in the following format.
+```code
         /
         A    :   5100 Kg
         B    :  17100 Kg
@@ -8,6 +9,7 @@ This project decodes serial data received through the serial port. It accepts se
         D    :  15100 Kg
         TOTAL:  59400 Kg
         \
+```
 The received data is then decoded into JSON format to verify whether the TOTAL value received is correct. The 'VALID'
 field indicates whether the TOTAL value is correct or not.
 
@@ -37,12 +39,12 @@ to JSON format as indicated below.
 
 ```json
     {
-        "TotalWeight"   :59000,
+        "TotalWeight"   :59400,
         "VALID"         :true,
-        "WeightA"       :5000,
-        "WeightB"       :17000,
-        "WeightC"       :22000,
-        "WeightD"       :15000
+        "WeightA"       :5100,
+        "WeightB"       :17100,
+        "WeightC"       :22100,
+        "WeightD"       :15100
     }
 ```
 
