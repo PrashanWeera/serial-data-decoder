@@ -24,6 +24,7 @@ field indicates whether the TOTAL value is correct or not.
 ## Introduction
 
 The main purpose of this application is to convert serially passed data in the following format,
+```code
         /
         A    :   5100 Kg
         B    :  17100 Kg
@@ -31,8 +32,10 @@ The main purpose of this application is to convert serially passed data in the f
         D    :  15100 Kg
         TOTAL:  59400 Kg
         \
+```
 to JSON format as indicated below.
-    '''json
+
+```json
     {
         "TotalWeight"   :59000,
         "VALID"         :true,
@@ -41,6 +44,7 @@ to JSON format as indicated below.
         "WeightC"       :22000,
         "WeightD"       :15000
     }
+```
 
 ## Features
 
