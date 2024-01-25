@@ -10,7 +10,7 @@ This project decodes serial data received through the serial port. It accepts se
         TOTAL:  59400 Kg
         \
 ```
-The received data is then decoded into JSON format to verify whether the TOTAL value received is correct. The 'VALID'
+The received data is then decoded into JSON format and verified whether the TOTAL value received is correct. The 'VALID'
 field indicates whether the TOTAL value is correct or not.
 
 ## Table of Contents
@@ -50,37 +50,38 @@ to JSON format as indicated below.
 
 ## Features
 
-* Accept data through a given serial port.
+* Accepts data through a given serial port.
 * Capability to collect partial data received through the serial port.
-* Conversion of the data to JSON format.
-* Printing latest data received to standard output every 10 seconds.
+* Conversion of the data into JSON format.
+* Printing latest data received to the standard output every 10 seconds.
 
 ## Getting Started
 
 This application was built with g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0. It was tested on 
-Linux  5.15.133.1-microsoft-standard-WSL2 on x86_64 platform.
+Linux 5.15.133.1-microsoft-standard-WSL2 on x86_64 platform using virtual serial port pair.
 
 ### Prerequisites
 
- 1. it requires 'nlohmann/json' and could be downloaded from https://github.com/nlohmann/json
- 2. if unit testing can be performed of google testing framework is installed.
+ 1. It requires 'nlohmann/json' and could be downloaded from https://github.com/nlohmann/json.
+ 2. If unit testing  is required, it can be performed using google testing framework.
 
 ### Installation
 
- 1. Clone the project to a local folder. {projdir}
+ 1. Clone the project to a local folder {projdir}.
  2. Clone 'nlohmann/json' package to a known location.
  3. Update INCLUDE_DIRS path of the makefile to include the directory of the nlohmann/json package.
  4. Issue make command to build the binary. 
  5. The executable binary will be created on {projdir}/build/DataPasser
- 6. To execute run ./DataPasser "serial port", where "serial port" is the com port that which application 
+ 6. To execute run command ./DataPasser "serial port", where "serial port" is the com port that which application 
  is required to access. Note: The application requires admin permission to access the serial port. So prefer to
  run it as sudo DataPasser /dev/ttyUSB01.
  7. To use the test build with 'google testing framework' build with the command 'make test'.
+ 8. The test build binary binary name is Tester.
 
 
 ## Limitations
 
- 1. The Tester performed only a limited number of functions.
- 2. Currently support only for a maximum of 10 channels. To increase the number of channels please refer to the DataPasser::ConvertJson function.
+ 1. The test binary, Tester performed only a limited number of unit tests.
+ 2. The application currently supports only for a maximum of 10 channels. To increase the number of channels please refer to the DataPasser::ConvertJson function.
 
 
