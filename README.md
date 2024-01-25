@@ -32,7 +32,7 @@ The main purpose of this application is to convert serially passed data in the f
         TOTAL:  59400 Kg
         \
 to JSON format as indicated below.
-    ```json
+    '''json
     {
         "TotalWeight"   :59000,
         "VALID"         :true,
