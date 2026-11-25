@@ -84,4 +84,8 @@ Linux 5.15.133.1-microsoft-standard-WSL2 on x86_64 platform using virtual serial
  1. The test binary, Tester performed only a limited number of unit tests.
  2. The application currently supports only for a maximum of 10 channels. To increase the number of channels please refer to the DataPasser::ConvertJson function.
 
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
 
